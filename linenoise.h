@@ -44,13 +44,13 @@ typedef struct linenoiseCompletions {
 
 typedef void(linenoiseCompletionCallback)(const char *, linenoiseCompletions *);
 void linenoiseSetCompletionCallback(linenoiseCompletionCallback *);
-void linenoiseAddCompletion(linenoiseCompletions *, char *);
+void linenoiseAddCompletion(linenoiseCompletions *, char const *);
 
 char *linenoise(const char *prompt);
 int linenoiseHistoryAdd(const char *line);
 int linenoiseHistorySetMaxLen(int len);
-int linenoiseHistorySave(char *filename);
-int linenoiseHistoryLoad(char *filename);
+int linenoiseHistorySave(char const *filename);
+int linenoiseHistoryLoad(char const *filename);
 void linenoiseClearScreen(void);
 
 #endif /* __LINENOISE_H */
