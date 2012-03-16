@@ -3,6 +3,9 @@ cmake_minimum_required(VERSION 2.6)
 project(linenoise)
 
 include_directories(${linenoise_SOURCE_DIR})
+if(MSVC)
+  include_directories(${linenoise_SOURCE_DIR}/win)
+endif(MSVC)
 
 add_library(linenoise linenoise.c)
 
