@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.6)
 
-projcet(linenoise)
+project(linenoise)
 
 include_directories(${linenoise_SOURCE_DIR})
 
